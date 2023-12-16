@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-beginner-reader.ss" "lang")((modname |025|) (read-case-sensitive #true) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp"))) (htdp-settings #(#true constructor repeating-decimal #false #true none #false ((lib "image.rkt" "teachpack" "2htdp") (lib "universe.rkt" "teachpack" "2htdp")) #false)))
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |025|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 #|Exercise 25. Take a look at this attempt to solve exercise 17:
 
     (define (image-classify img)
@@ -10,6 +10,8 @@
         [(<= (image-height img) (image-width img)) "wide"]))
 
 Does stepping through an application suggest a fix?|#
+
+(require 2htdp/image)
 
 ;; image-classify
 (define (image-classify img)
