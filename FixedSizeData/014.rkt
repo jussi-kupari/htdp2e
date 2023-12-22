@@ -8,4 +8,5 @@
   (string-ith str (- (string-length str) 1)))
 
 ;; Test with known result
-(string-last "abc") ; => "c
+(string-last "abc") ; => "c"
+(string-last "a")   ; => "a
