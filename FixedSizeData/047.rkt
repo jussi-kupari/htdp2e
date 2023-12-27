@@ -83,9 +83,10 @@ chapters can tell you.|#
 (check-expect (tock 0.07)       0)
 
 (define (tock hg)
-  (if (>= (- hg 0.1) 0)
-      (- hg 0.1)
-      0))
+  (if (negative? (- hg 0.1))
+      0
+      (- hg 0.1)))
+
 
 ;; HappinessGauge -> Image
 ;; Render an image of the happiness gauge by placing a correct size bar in the frame. 
