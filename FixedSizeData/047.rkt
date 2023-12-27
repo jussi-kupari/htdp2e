@@ -116,9 +116,9 @@ chapters can tell you.|#
 
 (define (adjust hg ke)
   (cond
-    ; Happiness can't go over 100
+    ;; Happiness can't go over 100
     [(and (> (* 1.33 hg) 100) (key=? ke "up")) 100]
-    ; If happiness is zero, you can still save the cat by fierce petting
+    ;; If happiness is zero, you can still save the situation by fierce petting
     [(and (zero? hg) (key=? ke "up")) (* 1.33 1)]
     [(key=? ke "up") (* 1.33 hg)]
     [(key=? ke "down") (* 0.8 hg)]

@@ -111,7 +111,7 @@ bar should go all the way across the scene.|#
 
 (define (adjust hg ke)
   (cond
-    ; If happiness is zero, you can still save the situation by fierce petting
+    ;; If happiness is zero, you can still save the situation by fierce petting
     [(and (zero? hg) (key=? ke "up")) (* 1.33 1)]
     [(key=? ke "up") (* 1.33 hg)]
     [(key=? ke "down") (* 0.8 hg)]
