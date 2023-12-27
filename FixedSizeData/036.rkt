@@ -9,10 +9,12 @@
 (check-expect (image-area (square 10 "solid" "green")) 100)
 (check-expect (image-area (rectangle 10 30 "solid" "blue")) 300)
 
-;(define (image-area img) (circle 0 "solid" "white")) ; the stub
-
-;(define (image-area img)                             ; the template
-;  (... img))
+#;
+(define (fn-for-image img)                         
+  (... img))
 
 (define (image-area img)
   (* (image-width img) (image-height img)))
+
+;; Template rules used:
+;; - atomic non-distinct: Image

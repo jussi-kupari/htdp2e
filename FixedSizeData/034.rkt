@@ -4,15 +4,19 @@
 #|Exercise 34. Design the function string-first, which extracts the first character from a non-empty string.
 Don’t worry about empty strings.|#
 
-;; string-first : String -> 1String
-;; Produces the first character of a non-empty string.
+;; NonEmptyString or NES is a String composed of 1 or more 1String
+
+;; string-first : NonEmptyString -> 1String
+;; Produces the first character from the given string.
 (check-expect (string-first "abc") "a")
 (check-expect (string-first "b") "b")
 
-;(define (string-first str) "") ; the stub
-
-;(define (string-first str)     ; the template
-;  (... str))
+#; 
+(define (fn-for-nes str)
+  (... str))
 
 (define (string-first str)
    (string-ith str 0))
+
+;; Template rules used:
+;; - atomic non-distinct: String

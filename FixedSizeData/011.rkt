@@ -9,4 +9,4 @@ In exercise 1 you developed the right-hand side of this function for concrete va
   (sqrt (+ (sqr x) (sqr y))))
 
 ;; Test with known result (5)
-(distance-to-origin 3 4) ; =>
+(distance-to-origin 3 4) ; => 5
