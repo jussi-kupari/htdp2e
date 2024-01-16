@@ -12,9 +12,7 @@ you that your test cases do not cover the full conditional. Add enough tests to 
   (cond
     [(string=? "red" s) "green"]
     [(string=? "green" s) "yellow"]
-    [(string=? "yellow" s) "red"]))
-
-|#
+    [(string=? "yellow" s) "red"])) |#
 
 ;; TrafficLight -> TrafficLight
 ;; yields the next state given current state s

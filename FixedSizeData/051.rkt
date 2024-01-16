@@ -10,7 +10,7 @@ Ask your engineering friends.|#
 (require 2htdp/image)
 (require 2htdp/universe)
 
-;; A Traffic Light that changes color after given time interval.
+;; A Traffic Light that changes color after a time interval.
 
 ;; =================
 ;; Constants:
@@ -57,11 +57,7 @@ Ask your engineering friends.|#
 (define (main s)
   (big-bang s                                        ; TrafficLight
             (on-tick   traffic-light-next INTERVAL)  ; TrafficLight -> TrafficLight
-            (to-draw   render)                       ; TrafficLight -> Image
-           ; (stop-when ...)                         ; TrafficLight -> Boolean
-           ; (on-mouse  ...)                         ; TrafficLight Integer Integer MouseEvent -> TrafficLight
-           ; (on-key    ...)                         ; TrafficLight KeyEvent -> TrafficLight
-  ))
+            (to-draw   render)))                     ; TrafficLight -> Image
 
 ;; traffic-light-next : TrafficLight -> TrafficLight
 ;; yields the next state given current state s
@@ -74,7 +70,6 @@ Ask your engineering friends.|#
     [(string=? "red" s)    "green"]
     [(string=? "green" s) "yellow"]
     [(string=? "yellow" s)   "red"]))
-
 
 ;; render : TrafficLight -> Image
 ;; Render the next traffic light
